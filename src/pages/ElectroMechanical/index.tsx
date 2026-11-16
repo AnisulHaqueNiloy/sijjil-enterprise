@@ -33,9 +33,10 @@ const ElectroMechanical: React.FC = () => {
   return (
     <div className="w-full">
       <PageHeader
-        badge="Division 01"
+        badge="Division 01 • MEP Engineering"
         title="Electro-Mechanical Services"
         description="We install and maintain electrical power systems, central air conditioning, backup generators, elevators, water supply pumps, and fire safety equipment."
+        bgImage="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[
           { label: 'Services', path: PATHS.services },
           { label: 'Electro-Mechanical' },

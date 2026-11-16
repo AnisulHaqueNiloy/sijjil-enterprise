@@ -65,6 +65,7 @@ const Contact: React.FC = () => {
         badge="Get in Touch"
         title="Contact Our Team"
         description="Reach out to discuss an upcoming tender, request a site visit, or get a clear cost estimate for your construction, electrical, or software project."
+        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[{ label: 'Contact Us' }]}
       />
 
