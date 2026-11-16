@@ -30,6 +30,7 @@ const Services: React.FC = () => {
         badge="What We Offer"
         title="Our Contracting Divisions"
         description="We provide dependable contracting services across three main disciplines: electrical power systems, building construction, and modern software development."
+        bgImage="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[{ label: 'Services' }]}
       />
 

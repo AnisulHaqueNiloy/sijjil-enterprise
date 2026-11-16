@@ -36,6 +36,7 @@ const About: React.FC = () => {
         badge="Company Profile"
         title="About Sijjil Enterprise"
         description="A government-enlisted contracting company delivering quality Civil Construction, Electrical Power Systems, and IT Infrastructure across Bangladesh."
+        bgImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[{ label: 'About Us' }]}
       />
 

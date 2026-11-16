@@ -33,9 +33,10 @@ const Construction: React.FC = () => {
   return (
     <div className="w-full">
       <PageHeader
-        badge="Division 02"
+        badge="Division 02 • Civil Works"
         title="Civil Construction Services"
         description="We construct multi-story office buildings, paved asphalt roads, concrete bridges, water drainage canals, and handle complete building renovations across Bangladesh."
+        bgImage="https://images.unsplash.com/photo-1541971875076-8f970d573be6?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[
           { label: 'Services', path: PATHS.services },
           { label: 'Construction' },

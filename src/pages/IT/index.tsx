@@ -79,6 +79,7 @@ const IT: React.FC = () => {
         badge="Division 03 • Software Engineering"
         title="Software & Web Development"
         description="We build fast, secure web applications, e-governance portals, Android & iOS mobile apps, and custom database systems for public institutions and enterprises."
+        bgImage="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[
           { label: 'Services', path: PATHS.services },
           { label: 'Software & Web Development' },

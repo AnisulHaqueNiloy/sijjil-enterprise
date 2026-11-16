@@ -33,6 +33,7 @@ const Projects: React.FC = () => {
         badge="Past & Present Work"
         title="Our Projects"
         description="A look at our government and private contracts in civil construction, electrical installations, and modern software development."
+        bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop"
         breadcrumbs={[{ label: 'Projects' }]}
       />
 
