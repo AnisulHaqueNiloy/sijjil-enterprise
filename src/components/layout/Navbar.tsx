@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { MAIN_NAV } from '@/data/navigation';
 import { COMPANY_INFO } from '@/data/company';
 import { PATHS } from '@/routes/paths';
+import logoImg from '@/assets/logo_icon.png';
 
 export interface NavbarProps {
   onOpenQuoteModal: () => void;
@@ -85,11 +86,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
           {/* Logo & Brand Identity */}
           <Link
             to={PATHS.home}
-            className="flex items-center gap-2.5 text-white group focus:outline-none focus:ring-2 focus:ring-accent rounded-brand"
+            className="flex items-center gap-3 text-white group focus:outline-none focus:ring-2 focus:ring-accent rounded-brand"
             aria-label={`${COMPANY_INFO.name} Home`}
           >
-            <div className="w-10 h-10 rounded-brand bg-gradient-to-br from-accent to-accent-hover text-primary-dark flex items-center justify-center font-black text-xl shadow-soft group-hover:scale-105 transition-transform">
-              S
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-brand bg-white p-1 flex items-center justify-center shadow-soft group-hover:scale-105 transition-transform shrink-0 border border-white/20">
+              <img
+                src={logoImg}
+                alt="Sijjil Enterprise Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-base sm:text-lg tracking-wider text-white uppercase group-hover:text-accent-light transition-colors leading-tight">

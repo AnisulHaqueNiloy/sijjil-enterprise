@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { COMPANY_INFO } from '@/data/company';
 import { FOOTER_QUICK_LINKS, FOOTER_SERVICE_LINKS } from '@/data/navigation';
 import { PATHS } from '@/routes/paths';
+import logoImg from '@/assets/logo_icon.png';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -19,10 +20,14 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link
               to={PATHS.home}
-              className="flex items-center gap-2.5 text-white inline-flex"
+              className="flex items-center gap-3 text-white inline-flex group"
             >
-              <div className="w-9 h-9 rounded-brand bg-gradient-to-br from-accent to-accent-hover text-primary-dark flex items-center justify-center font-black text-lg shadow-soft">
-                S
+              <div className="w-10 h-10 rounded-brand bg-white p-1 flex items-center justify-center shadow-soft group-hover:scale-105 transition-transform shrink-0 border border-white/20">
+                <img
+                  src={logoImg}
+                  alt="Sijjil Enterprise Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-extrabold text-lg tracking-wider text-white uppercase">
                 {COMPANY_INFO.name}
