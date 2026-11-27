@@ -1,15 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Home } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { PATHS } from '@/routes/paths';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
+const ROUTE_ALIASES: Record<string, string> = {
+  '/about': PATHS.about,
+  '/services': PATHS.services,
+  '/services/electro-mechanical': PATHS.electroMechanical,
+  '/services/electromechanical': PATHS.electroMechanical,
+  '/electro-mechanical': PATHS.electroMechanical,
+  '/services/construction': PATHS.construction,
+  '/construction': PATHS.construction,
+  '/services/it': PATHS.it,
+  '/it': PATHS.it,
+  '/projects': PATHS.projects,
+  '/contact': PATHS.contact,
+  '/contact-us': PATHS.contact,
+};
+
 const NotFound: React.FC = () => {
   usePageTitle(
     'Page Not Found | Sijjil Enterprise',
     'The requested page or tender record could not be found.'
   );
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Smart URL recovery for casing, trailing slashes, or legacy aliases
+  useEffect(() => {
+    const cleanPath = location.pathname
+      .replace(/\/+$/, '')
+      .replace(/\.html$/i, '')
+      .toLowerCase();
+
+    if (ROUTE_ALIASES[cleanPath]) {
+      navigate(ROUTE_ALIASES[cleanPath] + location.search + location.hash, { replace: true });
+    }
+  }, [location, navigate]);
 
   return (
     <div className="min-h-[75vh] flex items-center justify-center py-20 bg-lightgrey/40">

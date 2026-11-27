@@ -130,18 +130,22 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {COMPANY_INFO.leadership.map((leader, idx) => (
               <Reveal key={idx} delay={idx * 0.15}>
-                <Card hoverLift className="overflow-hidden border border-slate-border h-full flex flex-col p-0 bg-white shadow-soft">
-                  {/* Photo Container: 4:5 aspect ratio showing full face, aligned eyelines, no cropping */}
-                  <div className="relative w-full aspect-[4/5] bg-white overflow-hidden border-b border-slate-border/80 flex items-center justify-center">
-                    <img
-                      src={leader.image}
-                      alt={`${leader.title} - ${leader.role}`}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.02]"
-                    />
+                <Card hoverLift className="border border-slate-border h-full flex flex-col p-6 sm:p-8 bg-white shadow-soft">
+                  {/* Fixed 300x300 Photo Container: Centered, full face visible, perfectly aligned */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-[300px] h-[300px] max-w-full aspect-square rounded-brand-lg overflow-hidden border border-slate-border/90 bg-white shadow-sm relative group flex items-center justify-center">
+                      <img
+                        src={leader.image}
+                        alt={`${leader.title} - ${leader.role}`}
+                        width={300}
+                        height={300}
+                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
                   </div>
 
-                  {/* Executive Info Below Photo (Clean, Unobscured) */}
-                  <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  {/* Executive Info Below Photo */}
+                  <div className="flex-1 flex flex-col justify-between space-y-6">
                     <div>
                       <div className="flex items-center gap-2 mb-2.5">
                         <Badge variant="gold" className="text-[11px] font-bold tracking-wider uppercase">

@@ -1,4 +1,4 @@
-import directorImage from '@/assets/director_aligned.jpeg';
+import directorImage from '@/assets/image.png';
 import operationalManagerImage from '@/assets/operational_manager_aligned.jpeg';
 
 export interface CoreValue {
@@ -198,8 +198,8 @@ export const COMPANY_INFO: CompanyInfo = {
       displayTenders: "+880 1911-355230"
     },
     email: {
-      general: "Info.sijjilenterprise@gmail.com",
-      tenders: "Info.sijjilenterprise@gmail.com"
+      general: "s.sumon@sijjilenterprise.com",
+      tenders: "s.sumon@sijjilenterprise.com"
     },
     workingHours: {
       days: "Saturday - Thursday",
