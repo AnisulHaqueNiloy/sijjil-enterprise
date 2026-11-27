@@ -254,12 +254,12 @@ const Contact: React.FC = () => {
                     <Phone className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                     <div>
                       <div className="font-semibold text-primary">Phone Numbers</div>
-                      <div className="text-slate-muted mt-0.5">
+                      <div className="text-slate-muted mt-0.5 space-y-0.5">
                         <a href={`tel:${COMPANY_INFO.contact.phone.primary}`} className="hover:text-accent transition-colors block">
-                          Main: {COMPANY_INFO.contact.phone.displayPrimary}
+                          {COMPANY_INFO.contact.phone.displayPrimary}
                         </a>
-                        <a href={`tel:${COMPANY_INFO.contact.phone.tenders}`} className="hover:text-accent transition-colors block">
-                          Tenders: {COMPANY_INFO.contact.phone.displayTenders}
+                        <a href={`tel:${COMPANY_INFO.contact.phone.secondary}`} className="hover:text-accent transition-colors block">
+                          {COMPANY_INFO.contact.phone.displaySecondary}
                         </a>
                       </div>
                     </div>
@@ -272,9 +272,6 @@ const Contact: React.FC = () => {
                       <div className="text-slate-muted mt-0.5">
                         <a href={`mailto:${COMPANY_INFO.contact.email.general}`} className="hover:text-accent transition-colors block">
                           {COMPANY_INFO.contact.email.general}
-                        </a>
-                        <a href={`mailto:${COMPANY_INFO.contact.email.tenders}`} className="hover:text-accent transition-colors block">
-                          {COMPANY_INFO.contact.email.tenders}
                         </a>
                       </div>
                     </div>

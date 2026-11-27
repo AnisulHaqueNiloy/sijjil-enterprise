@@ -86,17 +86,25 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                 <span className="leading-snug">
-                  {COMPANY_INFO.contact.address.line1}, {COMPANY_INFO.contact.address.line2}, {COMPANY_INFO.contact.address.city}
+                  {COMPANY_INFO.contact.address.line1}, {COMPANY_INFO.contact.address.line2}
                 </span>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-accent shrink-0" />
-                <a
-                  href={`tel:${COMPANY_INFO.contact.phone.primary}`}
-                  className="hover:text-accent transition-colors"
-                >
-                  {COMPANY_INFO.contact.phone.displayPrimary}
-                </a>
+              <li className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <div className="flex flex-col space-y-0.5">
+                  <a
+                    href={`tel:${COMPANY_INFO.contact.phone.primary}`}
+                    className="hover:text-accent transition-colors"
+                  >
+                    {COMPANY_INFO.contact.phone.displayPrimary}
+                  </a>
+                  <a
+                    href={`tel:${COMPANY_INFO.contact.phone.secondary}`}
+                    className="hover:text-accent transition-colors"
+                  >
+                    {COMPANY_INFO.contact.phone.displaySecondary}
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-accent shrink-0" />

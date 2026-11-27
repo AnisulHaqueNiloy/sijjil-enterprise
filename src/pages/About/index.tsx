@@ -118,6 +118,67 @@ const About: React.FC = () => {
         </Container>
       </section>
 
+      {/* Executive Leadership & Management */}
+      <section className="py-20 lg:py-28 bg-white border-b border-slate-border">
+        <Container>
+          <SectionTitle
+            badge="Leadership"
+            title="Executive Management"
+            description="Our leadership team brings hands-on experience in public sector contracting, engineering execution, and corporate governance."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+            {COMPANY_INFO.leadership.map((leader, idx) => (
+              <Reveal key={idx} delay={idx * 0.15}>
+                <Card hoverLift className="overflow-hidden border border-slate-border h-full flex flex-col p-0 bg-white shadow-soft">
+                  {/* Photo Container: 4:5 aspect ratio showing full face, aligned eyelines, no cropping */}
+                  <div className="relative w-full aspect-[4/5] bg-white overflow-hidden border-b border-slate-border/80 flex items-center justify-center">
+                    <img
+                      src={leader.image}
+                      alt={`${leader.title} - ${leader.role}`}
+                      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.02]"
+                    />
+                  </div>
+
+                  {/* Executive Info Below Photo (Clean, Unobscured) */}
+                  <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                    <div>
+                      <div className="flex items-center gap-2 mb-2.5">
+                        <Badge variant="gold" className="text-[11px] font-bold tracking-wider uppercase">
+                          {leader.role}
+                        </Badge>
+                      </div>
+
+                      <h3 className="text-2xl font-extrabold text-primary tracking-tight mb-3">
+                        {leader.title}
+                      </h3>
+
+                      <p className="text-sm text-slate-muted leading-relaxed">
+                        {leader.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-5 border-t border-slate-border">
+                      <h4 className="text-xs uppercase tracking-wider font-bold text-primary mb-3">
+                        Key Responsibilities:
+                      </h4>
+                      <ul className="space-y-2.5">
+                        {leader.responsibilities.map((resp, rIdx) => (
+                          <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate">
+                            <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                            <span className="leading-snug">{resp}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* Core Values Section */}
       <section className="py-20 lg:py-28 bg-lightgrey border-b border-slate-border">
         <Container>

@@ -1,3 +1,6 @@
+import directorImage from '@/assets/director_aligned.jpeg';
+import operationalManagerImage from '@/assets/operational_manager_aligned.jpeg';
+
 export interface CoreValue {
   title: string;
   description: string;
@@ -12,6 +15,14 @@ export interface LegalRegistration {
   placeholderNotice: string;
 }
 
+export interface LeadershipMember {
+  title: string;
+  role: string;
+  image: string;
+  description: string;
+  responsibilities: string[];
+}
+
 export interface CompanyInfo {
   name: string;
   shortName: string;
@@ -24,6 +35,7 @@ export interface CompanyInfo {
   trustPoints: Array<{ title: string; subtitle: string; icon: string }>;
   coreValues: CoreValue[];
   registrations: LegalRegistration[];
+  leadership: LeadershipMember[];
   contact: {
     address: {
       line1: string;
@@ -34,8 +46,10 @@ export interface CompanyInfo {
     };
     phone: {
       primary: string;
+      secondary: string;
       tenders: string;
       displayPrimary: string;
+      displaySecondary: string;
       displayTenders: string;
     };
     email: {
@@ -52,17 +66,17 @@ export interface CompanyInfo {
 }
 
 export const COMPANY_INFO: CompanyInfo = {
-  name: "Sijjil Enterprise",
+  name: "SIJJIL ENTERPRISE",
   shortName: "Sijjil",
-  tagline: "Quality Construction, Electrical & IT Services",
+  tagline: "Complete Solutions, Solid Results",
   heroHeadline: "Reliable Construction, Electrical & IT Contracting in Bangladesh",
-  heroSubtext: "We deliver quality government and public sector projects on time — from building construction and electrical power systems to modern software and web portals.",
+  heroSubtext: "Complete Solutions, Solid Results — We deliver quality government and public sector projects on time, from building construction and electrical power systems to modern web applications.",
   aboutStory: [
-    "Sijjil Enterprise is a government-enlisted contracting company based in Dhaka, Bangladesh. We specialize in three main areas: Civil Construction, Electro-Mechanical engineering, and Information Technology (IT).",
+    "Sijjil Enterprise is an enlisted contracting company based in Jatrabari, Dhaka. We specialize in three main disciplines: Civil Construction, Electro-Mechanical engineering (MEP), and Information Technology (IT).",
     "Over the years, we have worked with government departments, public institutions, and private organizations to build durable buildings, roads, safe power systems, and modern digital applications.",
-    "We believe in straightforward work: honest pricing, skilled engineers on-site, using quality materials, and finishing every project on schedule."
+    "Our motto is 'Complete Solutions, Solid Results' — honest pricing, skilled engineers on-site, using quality materials, and finishing every project on schedule."
   ],
-  mission: "To deliver durable, safe, and cost-effective construction, electrical, and digital projects with clear communication and on-time completion.",
+  mission: "To deliver durable, safe, and cost-effective construction, electrical, and digital projects with clear communication and solid results.",
   vision: "To be one of Bangladesh's most dependable and respected contracting companies for government and public sector works.",
   trustPoints: [
     {
@@ -113,11 +127,35 @@ export const COMPANY_INFO: CompanyInfo = {
       iconName: "Eye"
     }
   ],
+  leadership: [
+    {
+      title: "Director",
+      role: "Executive Leadership & Strategy",
+      image: directorImage,
+      description: "Leading corporate strategy, government contract relationships, tender compliance, and executive oversight for Sijjil Enterprise.",
+      responsibilities: [
+        "Executive Leadership & Corporate Governance",
+        "Public Procurement & Tender Negotiations",
+        "Strategic Partnerships & Client Trust"
+      ]
+    },
+    {
+      title: "Operational Manager",
+      role: "Operations & Project Execution",
+      image: operationalManagerImage,
+      description: "Overseeing day-to-day site operations, multi-disciplinary engineering squads, logistics management, and on-time project handover.",
+      responsibilities: [
+        "Field Operations & Daily Site Supervision",
+        "Civil, MEP & Software Project Delivery",
+        "Resource Scheduling & Quality Assurance"
+      ]
+    }
+  ],
   registrations: [
     {
       title: "Trade License",
       regNumber: "TRAD/DNCC/019284/2024",
-      authority: "Dhaka North City Corporation (DNCC)",
+      authority: "Dhaka City Corporation",
       validity: "Up to Date (FY 2024-2025)",
       placeholderNotice: "Valid trade license for general contracting, civil works, electrical, and IT supply."
     },
@@ -145,27 +183,29 @@ export const COMPANY_INFO: CompanyInfo = {
   ],
   contact: {
     address: {
-      line1: "House 24, Road 7, Block F",
-      line2: "Banani, Dhaka-1213",
+      line1: "235, South Kutubkhali, Dhania",
+      line2: "Jatrabari, Dhaka-1236",
       city: "Dhaka",
       country: "Bangladesh",
-      note: "Corporate Office"
+      note: "Head Office"
     },
     phone: {
-      primary: "+88029876543",
-      tenders: "+8801700000000",
-      displayPrimary: "+880 2 9876543",
-      displayTenders: "+880 1700 000000"
+      primary: "+8801711193428",
+      secondary: "+8801911355230",
+      tenders: "+8801911355230",
+      displayPrimary: "+880 1711-193428",
+      displaySecondary: "+880 1911-355230",
+      displayTenders: "+880 1911-355230"
     },
     email: {
-      general: "info@sijjilenterprise.com",
-      tenders: "tenders@sijjilenterprise.com"
+      general: "Info.sijjilenterprise@gmail.com",
+      tenders: "Info.sijjilenterprise@gmail.com"
     },
     workingHours: {
       days: "Saturday - Thursday",
       time: "9:00 AM - 6:00 PM",
       weekend: "Friday: Closed"
     },
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.700319752252!2d90.39860655!3d23.79458215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a0f70deb73%3A0x30c36498f90fe23!2sBanani%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14612.394142728286!2d90.43000000000002!3d23.708000000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9b1d1f7c703%3A0x6e9f4a5c5ff4c980!2sJatrabari%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
   }
 };
